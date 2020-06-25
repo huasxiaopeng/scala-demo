@@ -26,4 +26,12 @@ object ListsDemo extends  App {
   //添加list 后面
   val e=d:+15
   println(e)
+
+  //使用循环
+  for(name<-namess)println(name)
+
+  //创建方式三：
+  val lsios=1::2::3::4::Nil
+  println(lsios)
+
 }
