@@ -54,5 +54,25 @@ object SampleLists extends App {
   println( nums.dropWhile(_ < 5))
   println(names.dropWhile(_ != "chris"))
 
+    /**
+     * 定义函数
+     * @param x
+     * @param y
+     * @return
+     */
+    def asd(x:Int,y:Int )={
+      val sums=x+y
+      println(s"recived $x and $y,their sum is $sums")
+        sums
+    }
+  val a=List(1,2,3,4,5)
+  /**
+   * 如结果所示，reduce用于add将列表简化a为单个值，在这种情况下，是列表中整数的总和。
+   */
+ println( a.reduce(asd))
+  /**
+   * 匿名函数
+   */
+  println(a.reduce(_+_))
 
 }

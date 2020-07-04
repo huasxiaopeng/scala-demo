@@ -1,9 +1,10 @@
 package com.lktbz.scala.day04
 import scala.collection.mutable.ArrayBuffer
 /**
- * 数组
+ * 数组 首先需要注意的是Array是定长数组，而ArrayBuffer是可变数组。下面是一个小例子，对数据进行便利和修改的操作。
  */
 object ArrayBufferDemo  extends App {
+  //可变数组
     //定义
    val ins= ArrayBuffer[Int]()
    val names=ArrayBuffer[String]()
@@ -53,4 +54,19 @@ object ArrayBufferDemo  extends App {
   a3.trimStart(2)                       // ArrayBuffer(c, d, e, f, g)
   a3.trimEnd(2)                         // ArrayBuffer(c, d, e)
 
+
+  //定长数组
+
+  val nus=  new Array[Int](10)//必须定义
+  val array1 = Array(1 to 10: _*);
+  val strarray = Array("aa","bb","cc","dd")
+
+  for (i<-array1)
+    println("定长数组打印"+i)
+
+
+  println(nus.mkString(","))
+  for (i<-strarray)
+    println("定长数组打印"+i)
+  println("通用打印"+strarray.mkString(","))
 }

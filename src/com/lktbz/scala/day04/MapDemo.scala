@@ -15,7 +15,6 @@ object MapDemo  extends App {
   )
 
   ///创建可变的map
-
  val ss= collection.mutable.Map("zs"->"lk")
   println(ss)
   //add
@@ -54,5 +53,9 @@ object MapDemo  extends App {
   ratings.foreach{
     case (k,v)=>println(s"key=$k+value$v")
   }
+
+  //排序map
+  var msps=scala.collection.immutable.SortedMap("01"->"a","02"->"b","03"->"c")
+  for((k,v)<-msps)println(s"key is$k and value is $v")
 
 }

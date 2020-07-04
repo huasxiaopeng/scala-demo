@@ -52,27 +52,37 @@ object LoopDemo extends App {
   )
   for (p<-people)println("list foreach-->"+p)
 
+  for(i<- 1 to 3; j<-1 to 3){
+     println("i="+i+"j="+j)
+  }
 
+  for(i<- 1 to 3;j<- 1 to 3 if i!=j){
+    println("i=."+i+"j=."+j)
+  }
+
+
+  var x=for (i<- 1 to 10)yield i%3
+  println("匹配的值为："+x)
   /**
    * method foreach
    */
 
-  people.foreach(println)
+//  people.foreach(println)
 
 
   /**
    * Using for and foreach with Maps
    */
-  val ratings = Map(
-    "Lady in the Water"  -> 3.0,
-    "Snakes on a Plane"  -> 4.0,
-    "You, Me and Dupree" -> 3.5
-  )
-
-  for ((key,value)<-ratings)println(s"key->${key}:-->value is-->${value}");
-
-  ratings.foreach{
-    case (str, d) => println(s"key:${str}-->value:${d}")
-  }
+//  val ratings = Map(
+//    "Lady in the Water"  -> 3.0,
+//    "Snakes on a Plane"  -> 4.0,
+//    "You, Me and Dupree" -> 3.5
+//  )
+//
+//  for ((key,value)<-ratings)println(s"key->${key}:-->value is-->${value}");
+//
+//  ratings.foreach{
+//    case (str, d) => println(s"key:${str}-->value:${d}")
+//  }
 
 }

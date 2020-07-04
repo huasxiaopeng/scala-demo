@@ -1,5 +1,5 @@
 package com.lktbz.scala.day01
-
+import scala.util.control.Breaks._
 /**
  * 强大的循环 09
  */
@@ -18,6 +18,15 @@ object forDemo  extends App {
    val drope= for (name<-names)yield name.drop(1).capitalize
     println(drope)
 
-
+  //for 循环的中止条件 break ，需要导入
+ breakable{
+  for(i <- 1 to 10){
+   if(i < 6){
+    println(i)
+   }else{
+    break;
+   }
+  }
+ }
 
 }
